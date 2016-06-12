@@ -1,5 +1,4 @@
 import {Component} from 'angular2/core';
-import {AuthorsComponent} from './authors.component';
 import {CourseService} from './course.service';
 
 @Component({
@@ -12,11 +11,7 @@ import {CourseService} from './course.service';
                 {{course}}
             </li>
         </ul>
-        <br />
-        <br />
-        <authors></authors>
     `,
-    directives: [AuthorsComponent],
     providers: [CourseService]
 })
 export class CoursesComponent {
