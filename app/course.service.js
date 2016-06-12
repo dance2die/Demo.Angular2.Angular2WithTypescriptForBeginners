@@ -11,9 +11,6 @@ System.register([], function(exports_1, context_1) {
                 CourseService.prototype.getCourses = function () {
                     return ["Course1", "Course2", "Course3"];
                 };
-                CourseService.prototype.getAuthors = function () {
-                    return ["Author1", "Author2", "Author3"];
-                };
                 return CourseService;
             }());
             exports_1("CourseService", CourseService);
