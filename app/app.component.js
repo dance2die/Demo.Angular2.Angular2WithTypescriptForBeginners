@@ -27,11 +27,12 @@ System.register(['angular2/core', './courses.component', './authors.component'],
             AppComponent = (function () {
                 function AppComponent() {
                     this.isActive = true;
+                    this.title = "Hello Angular 2";
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">Hello Angular2 App</h1>\n        <courses></courses>\n        <authors></authors>\n    ",
+                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n        <courses></courses>\n        <authors></authors>\n    ",
                         directives: [courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])

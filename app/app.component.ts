@@ -5,7 +5,8 @@ import {AuthorsComponent} from './authors.component';
 @Component({
     selector: 'my-app',
     template: `
-        <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">Hello Angular2 App</h1>
+        <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
+        <input type="text" [(ngModel)]="title" />
         <courses></courses>
         <authors></authors>
     `,
@@ -13,4 +14,5 @@ import {AuthorsComponent} from './authors.component';
 })
 export class AppComponent { 
     isActive: boolean = true;
+    title: string = "Hello Angular 2";
 }
