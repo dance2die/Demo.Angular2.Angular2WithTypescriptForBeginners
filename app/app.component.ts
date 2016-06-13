@@ -5,10 +5,12 @@ import {AuthorsComponent} from './authors.component';
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Hello Angular2 App</h1>
+        <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">Hello Angular2 App</h1>
         <courses></courses>
         <authors></authors>
     `,
     directives: [CoursesComponent, AuthorsComponent]
 })
-export class AppComponent { }
+export class AppComponent { 
+    isActive: boolean = true;
+}
