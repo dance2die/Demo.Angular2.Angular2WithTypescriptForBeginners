@@ -7,6 +7,7 @@ import {AuthorsComponent} from './authors.component';
     template: `
         <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
         <input type="text" [(ngModel)]="title" />
+        <button (click)='onClick($event)' >Click Me!</button>
         <courses></courses>
         <authors></authors>
     `,
@@ -15,4 +16,8 @@ import {AuthorsComponent} from './authors.component';
 export class AppComponent { 
     isActive: boolean = true;
     title: string = "Hello Angular 2";
+
+    onClick($event) {
+        console.log($event);
+    }
 }
