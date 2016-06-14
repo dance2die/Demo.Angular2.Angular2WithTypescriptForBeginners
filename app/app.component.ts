@@ -9,7 +9,7 @@ import {StarGlyphiconComponent} from './star-glyphicon.component';
         <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
         <input type="text" [(ngModel)]="title" />
 
-        <starGlyphicon></starGlyphicon>
+        <starGlyphicon [isFavorite]="post.isFavorite"></starGlyphicon>
 
         <button (click)='onClick($event)' >Click Me!</button>
         <courses></courses>
@@ -22,6 +22,10 @@ import {StarGlyphiconComponent} from './star-glyphicon.component';
 export class AppComponent { 
     isActive: boolean = true;
     title: string = "Hello Angular 2";
+    post = {
+        title: "Title",
+        isFavorite: true
+    };
 
     onClick($event) {
         console.log($event);

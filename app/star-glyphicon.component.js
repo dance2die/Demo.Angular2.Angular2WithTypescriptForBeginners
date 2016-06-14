@@ -20,26 +20,19 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             StarGlyphiconComponent = (function () {
                 function StarGlyphiconComponent() {
-                    this.isClicked = false;
+                    this.isFavorite = false;
                 }
-                // constructor(
-                //     private _el: ElementRef, 
-                //     private _renderer: Renderer) {
-                // }
                 StarGlyphiconComponent.prototype.applyStyle = function () {
-                    // if (this.isClicked) {
-                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", true);
-                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", false);
-                    // } else {
-                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", false);
-                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", true);
-                    // }
-                    this.isClicked = !this.isClicked;
+                    this.isFavorite = !this.isFavorite;
                 };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Boolean)
+                ], StarGlyphiconComponent.prototype, "isFavorite", void 0);
                 StarGlyphiconComponent = __decorate([
                     core_1.Component({
                         selector: 'starGlyphicon',
-                        template: "\n        <i class=\"glyphicon\" [class.glyphicon-star]=\"isClicked\" [class.glyphicon-star-empty]=\"!isClicked\" (click)=\"applyStyle()\"></i>\n    "
+                        template: "\n        <i class=\"glyphicon\" \n            [class.glyphicon-star-empty]=\"!isFavorite\" \n            [class.glyphicon-star]=\"isFavorite\" \n            (click)=\"applyStyle()\">\n        </i>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], StarGlyphiconComponent);
