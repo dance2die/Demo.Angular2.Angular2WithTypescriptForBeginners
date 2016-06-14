@@ -19,28 +19,29 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             StarGlyphiconComponent = (function () {
-                function StarGlyphiconComponent(_el, _renderer) {
-                    this._el = _el;
-                    this._renderer = _renderer;
+                function StarGlyphiconComponent() {
                     this.isClicked = false;
                 }
+                // constructor(
+                //     private _el: ElementRef, 
+                //     private _renderer: Renderer) {
+                // }
                 StarGlyphiconComponent.prototype.applyStyle = function () {
-                    if (this.isClicked) {
-                        this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", true);
-                        this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", false);
-                    }
-                    else {
-                        this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", false);
-                        this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", true);
-                    }
+                    // if (this.isClicked) {
+                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", true);
+                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", false);
+                    // } else {
+                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star", false);
+                    //     this._renderer.setElementClass(this._el.nativeElement, "glyphicon-star-empty", true);
+                    // }
                     this.isClicked = !this.isClicked;
                 };
                 StarGlyphiconComponent = __decorate([
                     core_1.Component({
                         selector: 'starGlyphicon',
-                        template: "\n        <span class=\"glyphicon\" [class.glyphicon-star]=\"isClicked\" [class.glyphicon-star-empty]=\"!isClicked\" (click)=\"applyStyle()\"></span>\n    "
+                        template: "\n        <i class=\"glyphicon\" [class.glyphicon-star]=\"isClicked\" [class.glyphicon-star-empty]=\"!isClicked\" (click)=\"applyStyle()\"></i>\n    "
                     }), 
-                    __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+                    __metadata('design:paramtypes', [])
                 ], StarGlyphiconComponent);
                 return StarGlyphiconComponent;
             }());
