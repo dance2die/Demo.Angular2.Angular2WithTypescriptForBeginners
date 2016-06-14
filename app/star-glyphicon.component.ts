@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input, EventEmitter, Output} from 'angular2/core';
 
 @Component({
     selector: 'starGlyphicon',
@@ -12,8 +12,10 @@ import {Component, Input} from 'angular2/core';
 })
 export class StarGlyphiconComponent {
     @Input() isFavorite: boolean = false;
+    @Output() change = new EventEmitter();
 
     applyStyle() {
         this.isFavorite = !this.isFavorite;
+        this.change.emit({newValue: this.isFavorite});
     }
 }

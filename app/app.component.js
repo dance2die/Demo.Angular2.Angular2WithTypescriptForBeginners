@@ -36,13 +36,16 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                         isFavorite: true
                     };
                 }
+                AppComponent.prototype.onFavoriteChange = function ($event) {
+                    console.log($event);
+                };
                 AppComponent.prototype.onClick = function ($event) {
                     console.log($event);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <starGlyphicon [isFavorite]=\"post.isFavorite\"></starGlyphicon>\n\n        <button (click)='onClick($event)' >Click Me!</button>\n        <courses></courses>\n        <authors></authors>\n    ",
+                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <starGlyphicon \n            [isFavorite]=\"post.isFavorite\"\n            (change)=\"onFavoriteChange($event)\">\n        </starGlyphicon>\n\n        <button (click)='onClick($event)' >Click Me!</button>\n        <courses></courses>\n        <authors></authors>\n    ",
                         directives: [courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
                             star_glyphicon_component_1.StarGlyphiconComponent]

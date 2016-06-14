@@ -21,14 +21,20 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             StarGlyphiconComponent = (function () {
                 function StarGlyphiconComponent() {
                     this.isFavorite = false;
+                    this.change = new core_1.EventEmitter();
                 }
                 StarGlyphiconComponent.prototype.applyStyle = function () {
                     this.isFavorite = !this.isFavorite;
+                    this.change.emit({ newValue: this.isFavorite });
                 };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Boolean)
                 ], StarGlyphiconComponent.prototype, "isFavorite", void 0);
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], StarGlyphiconComponent.prototype, "change", void 0);
                 StarGlyphiconComponent = __decorate([
                     core_1.Component({
                         selector: 'starGlyphicon',

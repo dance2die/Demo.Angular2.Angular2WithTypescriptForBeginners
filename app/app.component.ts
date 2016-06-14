@@ -9,7 +9,10 @@ import {StarGlyphiconComponent} from './star-glyphicon.component';
         <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
         <input type="text" [(ngModel)]="title" />
 
-        <starGlyphicon [isFavorite]="post.isFavorite"></starGlyphicon>
+        <starGlyphicon 
+            [isFavorite]="post.isFavorite"
+            (change)="onFavoriteChange($event)">
+        </starGlyphicon>
 
         <button (click)='onClick($event)' >Click Me!</button>
         <courses></courses>
@@ -26,6 +29,10 @@ export class AppComponent {
         title: "Title",
         isFavorite: true
     };
+
+    onFavoriteChange($event) {
+        console.log($event);
+    }
 
     onClick($event) {
         console.log($event);
