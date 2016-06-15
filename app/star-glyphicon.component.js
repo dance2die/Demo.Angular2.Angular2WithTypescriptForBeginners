@@ -38,7 +38,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 StarGlyphiconComponent = __decorate([
                     core_1.Component({
                         selector: 'starGlyphicon',
-                        templateUrl: 'app/star-glyphicon.template.html'
+                        templateUrl: 'app/star-glyphicon.template.html',
+                        styles: ["\n        .glyphicon-star {\n            color: orange;\n        }\n    "]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], StarGlyphiconComponent);

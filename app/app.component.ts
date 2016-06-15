@@ -9,6 +9,7 @@ import {StarGlyphiconComponent} from './star-glyphicon.component';
         <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
         <input type="text" [(ngModel)]="title" />
 
+        <i class="glyphicon glyphicon-star"></i>
         <starGlyphicon 
             [isFavorite]="post.isFavorite"
             (change)="onFavoriteChange($event)">
