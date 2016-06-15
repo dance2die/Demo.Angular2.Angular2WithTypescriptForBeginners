@@ -2,13 +2,7 @@ import {Component, Input, EventEmitter, Output} from 'angular2/core';
 
 @Component({
     selector: 'starGlyphicon',
-    template: `
-        <i class="glyphicon" 
-            [class.glyphicon-star-empty]="!isFavorite" 
-            [class.glyphicon-star]="isFavorite" 
-            (click)="applyStyle()">
-        </i>
-    `
+    templateUrl: 'app/star-glyphicon.template.html'
 })
 export class StarGlyphiconComponent {
     @Input() isFavorite: boolean = false;
