@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './star-glyphicon.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './star-glyphicon.component', './heart.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, star_glyphicon_component_1;
+    var core_1, courses_component_1, authors_component_1, star_glyphicon_component_1, heart_component_1;
     var AppComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (star_glyphicon_component_1_1) {
                 star_glyphicon_component_1 = star_glyphicon_component_1_1;
+            },
+            function (heart_component_1_1) {
+                heart_component_1 = heart_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -33,9 +36,13 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                     this.title = "Hello Angular 2";
                     this.post = {
                         title: "Title",
-                        isFavorite: true
+                        isFavorite: true,
+                        isLiked: true
                     };
                 }
+                AppComponent.prototype.onLikeChange = function ($event) {
+                    console.log($event);
+                };
                 AppComponent.prototype.onFavoriteChange = function ($event) {
                     console.log($event);
                 };
@@ -45,10 +52,11 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <i class=\"glyphicon glyphicon-star\"></i>\n        <starGlyphicon \n            [isFavorite]=\"post.isFavorite\"\n            (change)=\"onFavoriteChange($event)\">\n        </starGlyphicon>\n\n        <button (click)='onClick($event)' >Click Me!</button>\n        <courses></courses>\n        <authors></authors>\n    ",
+                        template: "\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <i class=\"glyphicon glyphicon-star\"></i>\n        <starGlyphicon \n            [isFavorite]=\"post.isFavorite\"\n            (change)=\"onFavoriteChange($event)\">\n        </starGlyphicon>\n\n        <heart\n            [isLiked]=\"post.isLiked\"\n            (change)=\"onLikeChange($event)\">\n        </heart>\n\n        <button (click)='onClick($event)' >Click Me!</button>\n        <courses></courses>\n        <authors></authors>\n    ",
                         directives: [courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
-                            star_glyphicon_component_1.StarGlyphiconComponent]
+                            star_glyphicon_component_1.StarGlyphiconComponent,
+                            heart_component_1.HeartComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
