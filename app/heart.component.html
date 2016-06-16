@@ -1,13 +1,9 @@
 
-<i class="glyphicon"
-    [class.glyphicon-heart]="isLiked"
-    [class.glyphicon-heart-empty]="!isLiked"
-    [style.background]="isLiked ? 'deeppink' : '#CCC'"
-    (click)="applyStyle()"
-    (hover)="onHover()"
-    (blur)="onBlur()">
-    {{heartCount}}
+<i class="glyphicon glyphicon-heart"
+    [class.highlighted]="isLiked"
+    (click)="applyStyle()">
 </i>
+<span>{{heartCount}}</span>
 
 
 

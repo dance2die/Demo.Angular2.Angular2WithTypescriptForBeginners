@@ -23,14 +23,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this._el = _el;
                     this._renderer = _renderer;
                     this.change = new core_1.EventEmitter();
-                    this.heartCount = 11;
                 }
-                HeartComponent.prototype.onHover = function () {
-                    this._renderer.setElementStyle(this._el.nativeElement, 'cursor', 'pointer');
-                };
-                HeartComponent.prototype.onBlur = function () {
-                    this._renderer.setElementStyle(this._el.nativeElement, 'cursor', null);
-                };
                 HeartComponent.prototype.applyStyle = function () {
                     // this.isLiked = !this.isLiked;
                     this.change.emit({ newValue: this.isLiked });
@@ -51,10 +44,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Output(), 
                     __metadata('design:type', Object)
                 ], HeartComponent.prototype, "change", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Number)
+                ], HeartComponent.prototype, "heartCount", void 0);
                 HeartComponent = __decorate([
                     core_1.Component({
                         selector: 'heart',
-                        templateUrl: 'app/heart.component.html'
+                        templateUrl: 'app/heart.component.html',
+                        styles: ["\n        .glyphicon-heart {\n            color: #ccc;\n            cursor: pointer;\n        }\n\n        .highlighted {\n            color: deeppink;\n        }\n    "]
                     }), 
                     __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
                 ], HeartComponent);

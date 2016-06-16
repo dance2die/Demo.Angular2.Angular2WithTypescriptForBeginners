@@ -3,22 +3,24 @@ import {Component, Input, Output, EventEmitter, ElementRef, Renderer} from 'angu
 
 @Component({
     selector: 'heart',
-    templateUrl: 'app/heart.component.html'
+    templateUrl: 'app/heart.component.html',
+    styles: [`
+        .glyphicon-heart {
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .highlighted {
+            color: deeppink;
+        }
+    `]
 })
 export class HeartComponent {
     @Input() isLiked: boolean;
     @Output() change = new EventEmitter();
-    heartCount: number = 11;
+    @Input() heartCount: number;
 
     constructor(private _el:ElementRef, private _renderer: Renderer) {
-    }
-
-    onHover() {
-        this._renderer.setElementStyle(this._el.nativeElement, 'cursor', 'pointer');
-    }
-
-    onBlur() {
-        this._renderer.setElementStyle(this._el.nativeElement, 'cursor', null);
     }
 
     applyStyle() {

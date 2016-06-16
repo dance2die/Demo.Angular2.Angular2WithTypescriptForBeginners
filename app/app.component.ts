@@ -17,6 +17,7 @@ import {HeartComponent} from './heart.component';
         </starGlyphicon>
 
         <heart
+            [heartCount]="post.heartCount"
             [isLiked]="post.isLiked"
             (change)="onLikeChange($event)">
         </heart>
@@ -36,7 +37,8 @@ export class AppComponent {
     post = {
         title: "Title",
         isFavorite: true,
-        isLiked: true
+        heartCount: 10,
+        isLiked: false
     };
 
     onLikeChange($event) {
