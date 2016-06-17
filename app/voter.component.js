@@ -20,36 +20,30 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             VoterComponent = (function () {
                 function VoterComponent() {
-                    this.myVote = 0;
                     this.voteCount = 0;
+                    this.myVote = 0;
                     this.vote = new core_1.EventEmitter();
                 }
-                VoterComponent.prototype.isUpClicked = function () {
-                    if (this.myVote = 1) {
+                VoterComponent.prototype.upVote = function () {
+                    if (this.myVote == 1)
                         return;
-                    }
                     this.myVote++;
-                    this.vote.emit({
-                        myVote: this.myVote
-                    });
+                    this.vote.emit({ myVote: this.myVote });
                 };
-                VoterComponent.prototype.isDownClicked = function () {
-                    if (this.myVote = -1) {
+                VoterComponent.prototype.downVote = function () {
+                    if (this.myVote == -1)
                         return;
-                    }
                     this.myVote--;
-                    this.vote.emit({
-                        myVote: this.myVote
-                    });
+                    this.vote.emit({ myVote: this.myVote });
                 };
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', Number)
-                ], VoterComponent.prototype, "myVote", void 0);
+                    __metadata('design:type', Object)
+                ], VoterComponent.prototype, "voteCount", void 0);
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', Number)
-                ], VoterComponent.prototype, "voteCount", void 0);
+                    __metadata('design:type', Object)
+                ], VoterComponent.prototype, "myVote", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', Object)
@@ -57,8 +51,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 VoterComponent = __decorate([
                     core_1.Component({
                         selector: 'voter',
-                        template: "\n        <div style=\"width: 20px\">\n            <i  [class.highlighted]=\"myVote == 1\"\n                (click)=\"isUpClicked()\"\n                class=\"glyphicon glyphicon-menu-up\">\n            </i>\n\n            <span>{{voteCount + myVote}}</span>\n\n            <i  [class.highlighted]=\"myVote == -1\"\n                (click)=\"isDownClicked()\"\n                class=\"glyphicon glyphicon-menu-down\">\n            </i>\n        </div>\n    ",
-                        styles: ["\n        .highlighted {\n            color: oranage;\n        }\n    "]
+                        template: "\n    <div class=\"voter\">\n        <i \n            class=\"glyphicon glyphicon-menu-up vote-button\"\n            [class.highlighted]=\"myVote == 1\" \n            (click)=\"upVote()\"></i>\n            \n        <span class=\"vote-count\">{{ voteCount + myVote }}</span>\n        \n        <i \n            class=\"glyphicon glyphicon-menu-down vote-button\"\n            [class.highlighted]=\"myVote == -1\" \n            (click)=\"downVote()\"></i>\n    </div>\n    ",
+                        styles: ["\n        .voter {\n            width: 20px;\n            text-align: center;\n            color: #999;\n        }\n        \n        .vote-count {\n            font-size: 1.2em;\n        }\n        \n        .vote-button {\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            font-weight: bold;\n            color: orange;\n        }\n    "]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], VoterComponent);
