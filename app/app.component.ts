@@ -3,6 +3,7 @@ import {CoursesComponent} from './courses.component';
 import {AuthorsComponent} from './authors.component';
 import {StarGlyphiconComponent} from './star-glyphicon.component';
 import {HeartComponent} from './heart.component';
+import {VoterComponent} from './voter.component';
 
 @Component({
     selector: 'my-app',
@@ -22,14 +23,23 @@ import {HeartComponent} from './heart.component';
             (change)="onLikeChange($event)">
         </heart>
 
-        <button (click)='onClick($event)' >Click Me!</button>
+        <button (click)='onClick($event)'>Click Me!</button>
+        <br /><br />
+        <voter
+            [myVote]="voter.myVote"
+            [voteCount]="voter.voteCount"
+            (vote)="onVote($event)">
+        </voter>
+
+
         <courses></courses>
         <authors></authors>
     `,
     directives: [CoursesComponent, 
                  AuthorsComponent,
                  StarGlyphiconComponent,
-                 HeartComponent]
+                 HeartComponent,
+                 VoterComponent]
 })
 export class AppComponent { 
     isActive: boolean = true;
@@ -41,6 +51,11 @@ export class AppComponent {
         isLiked: false
     };
 
+    voter = {
+        myVote: 0,
+        voteCount: 10
+    }
+
     onLikeChange($event) {
         console.log($event);
     }
@@ -50,6 +65,10 @@ export class AppComponent {
     }
 
     onClick($event) {
+        console.log($event);
+    }
+
+    onVote($event){
         console.log($event);
     }
 }
