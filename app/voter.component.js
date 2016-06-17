@@ -20,34 +20,26 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             VoterComponent = (function () {
                 function VoterComponent() {
+                    this.myVote = 0;
+                    this.voteCount = 0;
                     this.vote = new core_1.EventEmitter();
                 }
                 VoterComponent.prototype.isUpClicked = function () {
                     if (this.myVote = 1) {
-                        this.myVote = 0;
-                        this.voteCount++;
+                        return;
                     }
-                    else {
-                        this.myVote = 1;
-                        this.voteCount--;
-                    }
+                    this.myVote++;
                     this.vote.emit({
-                        newVote: this.myVote,
-                        newVoteCount: this.voteCount
+                        myVote: this.myVote
                     });
                 };
                 VoterComponent.prototype.isDownClicked = function () {
                     if (this.myVote = -1) {
-                        this.myVote = 0;
-                        this.voteCount--;
+                        return;
                     }
-                    else {
-                        this.myVote = -1;
-                        this.voteCount++;
-                    }
+                    this.myVote--;
                     this.vote.emit({
-                        newVote: this.myVote,
-                        newVoteCount: this.voteCount
+                        myVote: this.myVote
                     });
                 };
                 __decorate([
@@ -65,7 +57,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 VoterComponent = __decorate([
                     core_1.Component({
                         selector: 'voter',
-                        template: "\n        <div style=\"width: 20px\">\n            <i  [style.highlighted]=\"myVote > 0 ? true : false\"\n                (click)=\"isUpClicked()\"\n                class=\"glyphicon glyphicon-menu-up\">\n            </i>\n\n            <span>{{voteCount}}</span>\n\n            <i  [style.highlighted]=\"myVote < 0 ? true: false\"\n                (click)=\"isDownClicked()\"\n                class=\"glyphicon glyphicon-menu-down\">\n            </i>\n        </div>\n    ",
+                        template: "\n        <div style=\"width: 20px\">\n            <i  [class.highlighted]=\"myVote == 1\"\n                (click)=\"isUpClicked()\"\n                class=\"glyphicon glyphicon-menu-up\">\n            </i>\n\n            <span>{{voteCount + myVote}}</span>\n\n            <i  [class.highlighted]=\"myVote == -1\"\n                (click)=\"isDownClicked()\"\n                class=\"glyphicon glyphicon-menu-down\">\n            </i>\n        </div>\n    ",
                         styles: ["\n        .highlighted {\n            color: oranage;\n        }\n    "]
                     }), 
                     __metadata('design:paramtypes', [])

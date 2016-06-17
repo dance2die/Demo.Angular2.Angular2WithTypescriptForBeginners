@@ -4,14 +4,14 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
     selector: 'voter',
     template: `
         <div style="width: 20px">
-            <i  [style.highlighted]="myVote > 0 ? true : false"
+            <i  [class.highlighted]="myVote == 1"
                 (click)="isUpClicked()"
                 class="glyphicon glyphicon-menu-up">
             </i>
 
-            <span>{{voteCount}}</span>
+            <span>{{voteCount + myVote}}</span>
 
-            <i  [style.highlighted]="myVote < 0 ? true: false"
+            <i  [class.highlighted]="myVote == -1"
                 (click)="isDownClicked()"
                 class="glyphicon glyphicon-menu-down">
             </i>
@@ -24,35 +24,31 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
     `]
 })
 export class VoterComponent {
-    @Input() myVote: number;
-    @Input() voteCount: number;
+    @Input() myVote: number = 0;
+    @Input() voteCount: number = 0;
     @Output() vote = new EventEmitter();
 
     isUpClicked() {
         if (this.myVote = 1){
-            this.myVote = 0;
-            this.voteCount++;
-        } else {
-            this.myVote = 1;
-            this.voteCount--;
+            return;
         }
+
+        this.myVote++;
+
         this.vote.emit({
-            newVote: this.myVote,
-            newVoteCount: this.voteCount
+            myVote: this.myVote
         });
     }
 
     isDownClicked() {
         if (this.myVote = -1){
-            this.myVote = 0;
-            this.voteCount--;
-        } else {
-            this.myVote = -1;
-            this.voteCount++;
+            return;
         }
+
+        this.myVote--;
+
         this.vote.emit({
-            newVote: this.myVote,
-            newVoteCount: this.voteCount
+            myVote: this.myVote
         });
     }
 }
