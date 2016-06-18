@@ -15,11 +15,14 @@ import {HeartComponent} from './heart.component';
                 <h5 class="media-heading">{{data.tweeterHandle}}</h5>
                 <br />
                 {{data.tweetContent}}
+                <br />
+                <div>
+                    <heart
+                        [isLiked]="data.isLiked"
+                        [heartCount]="data.heartCount">
+                    </heart>
+                </div>
             </div>
-            <heart
-                [isLiked]="data.isLiked"
-                [heartCount]="data.heartCount">
-            </heart>
         </div>
     `,
     directives: [HeartComponent]
