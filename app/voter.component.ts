@@ -1,23 +1,25 @@
 
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {TweetComponent} from './tweet.component';
+import {TweetService} from './tweet.service';
 
 @Component({
     selector: 'voter',
     template: `
-    <div class="voter">
-        <i 
-            class="glyphicon glyphicon-menu-up vote-button"
-            [class.highlighted]="myVote == 1" 
-            (click)="upVote()"></i>
+        <div class="voter">
+            <i 
+                class="glyphicon glyphicon-menu-up vote-button"
+                [class.highlighted]="myVote == 1" 
+                (click)="upVote()"></i>
+                
+            <span class="vote-count">{{ voteCount + myVote }}</span>
             
-        <span class="vote-count">{{ voteCount + myVote }}</span>
-        
-        <i 
-            class="glyphicon glyphicon-menu-down vote-button"
-            [class.highlighted]="myVote == -1" 
-            (click)="downVote()"></i>
-    </div>
-    `,
+            <i 
+                class="glyphicon glyphicon-menu-down vote-button"
+                [class.highlighted]="myVote == -1" 
+                (click)="downVote()"></i>
+        </div>
+        `,
     styles: [`
         .voter {
             width: 20px;
@@ -37,7 +39,9 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
             font-weight: bold;
             color: orange;
         }
-    `]
+    `],
+    directives: [TweetComponent],
+    providers: [TweetService]
 })
 export class VoterComponent {
     @Input() voteCount = 0;

@@ -19,13 +19,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             HeartComponent = (function () {
-                function HeartComponent(_el, _renderer) {
-                    this._el = _el;
-                    this._renderer = _renderer;
+                function HeartComponent() {
                     this.change = new core_1.EventEmitter();
                 }
                 HeartComponent.prototype.applyStyle = function () {
-                    // this.isLiked = !this.isLiked;
                     this.change.emit({ newValue: this.isLiked });
                     if (this.isLiked) {
                         this.isLiked = false;
@@ -54,7 +51,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         templateUrl: 'app/heart.component.html',
                         styles: ["\n        .glyphicon-heart {\n            color: #ccc;\n            cursor: pointer;\n        }\n\n        .highlighted {\n            color: deeppink;\n        }\n    "]
                     }), 
-                    __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+                    __metadata('design:paramtypes', [])
                 ], HeartComponent);
                 return HeartComponent;
             }());

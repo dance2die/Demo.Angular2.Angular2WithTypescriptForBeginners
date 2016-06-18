@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter, ElementRef, Renderer} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 
 @Component({
@@ -20,11 +20,7 @@ export class HeartComponent {
     @Output() change = new EventEmitter();
     @Input() heartCount: number;
 
-    constructor(private _el:ElementRef, private _renderer: Renderer) {
-    }
-
     applyStyle() {
-        // this.isLiked = !this.isLiked;
         this.change.emit({newValue: this.isLiked});
 
         if (this.isLiked){

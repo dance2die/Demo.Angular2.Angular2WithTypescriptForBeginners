@@ -4,10 +4,27 @@ import {AuthorsComponent} from './authors.component';
 import {StarGlyphiconComponent} from './star-glyphicon.component';
 import {HeartComponent} from './heart.component';
 import {VoterComponent} from './voter.component';
+import {TweetService} from './tweet.service';
+import {TweetComponent} from './tweet.component';
 
 @Component({
     selector: 'my-app',
     template: `
+        <div class="tweets">
+            <div *ngFor="#tweet of tweets">
+                <tweet 
+                    [imageSrc]="tweet.imageSrc"
+                    [authorName]="tweet.authorName"
+                    [tweeterHandle]="tweet.tweeterHandle"
+                    [tweetContent]="tweet.tweetContent">
+                </tweet>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
         <h1 [style.backgroundColor]="isActive ? 'blue' : 'red'">{{title}}</h1>
         <input type="text" [(ngModel)]="title" />
 
@@ -39,7 +56,9 @@ import {VoterComponent} from './voter.component';
                  AuthorsComponent,
                  StarGlyphiconComponent,
                  HeartComponent,
-                 VoterComponent]
+                 VoterComponent,
+                 TweetComponent],
+    providers: [TweetService]
 })
 export class AppComponent { 
     isActive: boolean = true;
@@ -50,6 +69,12 @@ export class AppComponent {
         heartCount: 10,
         isLiked: false
     };
+
+    tweets: any;
+
+    constructor(private _tweet: TweetService){
+        this.tweets = _tweet.getTweets();
+    }
 
     voter = {
         myVote: 0,

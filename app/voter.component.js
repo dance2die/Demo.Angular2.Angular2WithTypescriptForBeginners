@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', './tweet.component', './tweet.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,18 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, tweet_component_1, tweet_service_1;
     var VoterComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (tweet_component_1_1) {
+                tweet_component_1 = tweet_component_1_1;
+            },
+            function (tweet_service_1_1) {
+                tweet_service_1 = tweet_service_1_1;
             }],
         execute: function() {
             VoterComponent = (function () {
@@ -51,8 +57,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 VoterComponent = __decorate([
                     core_1.Component({
                         selector: 'voter',
-                        template: "\n    <div class=\"voter\">\n        <i \n            class=\"glyphicon glyphicon-menu-up vote-button\"\n            [class.highlighted]=\"myVote == 1\" \n            (click)=\"upVote()\"></i>\n            \n        <span class=\"vote-count\">{{ voteCount + myVote }}</span>\n        \n        <i \n            class=\"glyphicon glyphicon-menu-down vote-button\"\n            [class.highlighted]=\"myVote == -1\" \n            (click)=\"downVote()\"></i>\n    </div>\n    ",
-                        styles: ["\n        .voter {\n            width: 20px;\n            text-align: center;\n            color: #999;\n        }\n        \n        .vote-count {\n            font-size: 1.2em;\n        }\n        \n        .vote-button {\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            font-weight: bold;\n            color: orange;\n        }\n    "]
+                        template: "\n        <div class=\"voter\">\n            <i \n                class=\"glyphicon glyphicon-menu-up vote-button\"\n                [class.highlighted]=\"myVote == 1\" \n                (click)=\"upVote()\"></i>\n                \n            <span class=\"vote-count\">{{ voteCount + myVote }}</span>\n            \n            <i \n                class=\"glyphicon glyphicon-menu-down vote-button\"\n                [class.highlighted]=\"myVote == -1\" \n                (click)=\"downVote()\"></i>\n        </div>\n        ",
+                        styles: ["\n        .voter {\n            width: 20px;\n            text-align: center;\n            color: #999;\n        }\n        \n        .vote-count {\n            font-size: 1.2em;\n        }\n        \n        .vote-button {\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            font-weight: bold;\n            color: orange;\n        }\n    "],
+                        directives: [tweet_component_1.TweetComponent],
+                        providers: [tweet_service_1.TweetService]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], VoterComponent);
