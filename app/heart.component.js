@@ -38,13 +38,13 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     __metadata('design:type', Boolean)
                 ], HeartComponent.prototype, "isLiked", void 0);
                 __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', Object)
-                ], HeartComponent.prototype, "change", void 0);
-                __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Number)
                 ], HeartComponent.prototype, "heartCount", void 0);
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], HeartComponent.prototype, "change", void 0);
                 HeartComponent = __decorate([
                     core_1.Component({
                         selector: 'heart',

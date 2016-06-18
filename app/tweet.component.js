@@ -23,31 +23,15 @@ System.register(['angular2/core', './heart.component'], function(exports_1, cont
         execute: function() {
             TweetComponent = (function () {
                 function TweetComponent() {
-                    this.imageSrc = "";
-                    this.authorName = "";
-                    this.tweeterHandle = "";
-                    this.tweetContent = "";
                 }
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', String)
-                ], TweetComponent.prototype, "imageSrc", void 0);
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', String)
-                ], TweetComponent.prototype, "authorName", void 0);
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', String)
-                ], TweetComponent.prototype, "tweeterHandle", void 0);
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', String)
-                ], TweetComponent.prototype, "tweetContent", void 0);
+                    __metadata('design:type', Array)
+                ], TweetComponent.prototype, "data", void 0);
                 TweetComponent = __decorate([
                     core_1.Component({
                         selector: 'tweet',
-                        template: "\n        <div class=\"media\">\n            <div class=\"media-left\">\n                <a href=\"#\">\n                <img class=\"media-object\" [src]=\"imageSrc\">\n                </a>\n            </div>\n            <div class=\"media-body\">\n                <h4 class=\"media-heading\">{{authorName}}</h4>\n                <h5 class=\"media-heading\">{{tweeterHandle}}</h5>\n                <br />\n                {{tweetContent}}\n            </div>\n        </div>\n    ",
+                        template: "\n        <div class=\"media\">\n            <div class=\"media-left\">\n                <a href=\"#\">\n                <img class=\"media-object\" [src]=\"data.imageSrc\">\n                </a>\n            </div>\n            <div class=\"media-body\">\n                <h4 class=\"media-heading\">{{data.authorName}}</h4>\n                <h5 class=\"media-heading\">{{data.tweeterHandle}}</h5>\n                <br />\n                {{data.tweetContent}}\n            </div>\n            <heart\n                [isLiked]=\"data.isLiked\"\n                [heartCount]=\"data.heartCount\">\n            </heart>\n        </div>\n    ",
                         directives: [heart_component_1.HeartComponent]
                     }), 
                     __metadata('design:paramtypes', [])

@@ -12,12 +12,7 @@ import {TweetComponent} from './tweet.component';
     template: `
         <div class="tweets">
             <div *ngFor="#tweet of tweets">
-                <tweet 
-                    [imageSrc]="tweet.imageSrc"
-                    [authorName]="tweet.authorName"
-                    [tweeterHandle]="tweet.tweeterHandle"
-                    [tweetContent]="tweet.tweetContent">
-                </tweet>
+                <tweet [data]="tweet"></tweet>
             </div>
         </div>
 

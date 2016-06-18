@@ -7,22 +7,23 @@ import {HeartComponent} from './heart.component';
         <div class="media">
             <div class="media-left">
                 <a href="#">
-                <img class="media-object" [src]="imageSrc">
+                <img class="media-object" [src]="data.imageSrc">
                 </a>
             </div>
             <div class="media-body">
-                <h4 class="media-heading">{{authorName}}</h4>
-                <h5 class="media-heading">{{tweeterHandle}}</h5>
+                <h4 class="media-heading">{{data.authorName}}</h4>
+                <h5 class="media-heading">{{data.tweeterHandle}}</h5>
                 <br />
-                {{tweetContent}}
+                {{data.tweetContent}}
             </div>
+            <heart
+                [isLiked]="data.isLiked"
+                [heartCount]="data.heartCount">
+            </heart>
         </div>
     `,
     directives: [HeartComponent]
 })
 export class TweetComponent {
-    @Input() imageSrc: string = "";
-    @Input() authorName: string = "";
-    @Input() tweeterHandle: string = "";
-    @Input() tweetContent: string = "";
+    @Input() data: any[];
 }

@@ -17,8 +17,8 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 })
 export class HeartComponent {
     @Input() isLiked: boolean;
-    @Output() change = new EventEmitter();
     @Input() heartCount: number;
+    @Output() change = new EventEmitter();
 
     applyStyle() {
         this.change.emit({newValue: this.isLiked});
