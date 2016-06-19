@@ -9,11 +9,16 @@ import {AutoGrowDirective} from './auto-grow.directive';
         <h2>Courses</h2>
         {{title}}
         <input type="text" autoGrow />
-        <ul>
-            <li *ngFor="#course of courses">
-                {{course}}
-            </li>
-        </ul>
+        <div [hidden]="courses.length == 0">
+            <ul>
+                <li *ngFor="#course of courses">
+                    {{course}}
+                </li>
+            </ul>
+        </div>
+        <div [hidden]="courses.length != 0">
+            You don't have any courses
+        </div>
     `,
     providers: [CourseService],
     directives: [AutoGrowDirective]
