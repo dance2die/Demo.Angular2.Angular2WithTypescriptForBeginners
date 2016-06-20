@@ -7,12 +7,21 @@ import {VoterComponent} from './voter.component';
 import {TweetService} from './tweet.service';
 import {TweetComponent} from './tweet.component';
 import {SummaryPipe} from './summary.pipe';
+import {BootstrapPanelComponent} from './bootstrap.panel.component';
 
 
 @Component({
     selector: 'my-app',
     pipes: [SummaryPipe],
     template: `
+        <bs-panel>
+            <div class="heading">This is a heading</div>
+            <div class="body">Body line 1</div>
+            <div class="body">Body line 2</div>
+        </bs-panel>
+
+        <br />
+        <br />
         {{post2.title}}
         <br />
         {{post2.body | summary:20}}
@@ -70,7 +79,8 @@ import {SummaryPipe} from './summary.pipe';
                  StarGlyphiconComponent,
                  HeartComponent,
                  VoterComponent,
-                 TweetComponent],
+                 TweetComponent,
+                 BootstrapPanelComponent],
     providers: [TweetService]
 })
 export class AppComponent { 
