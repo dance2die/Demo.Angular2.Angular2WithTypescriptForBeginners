@@ -2,6 +2,10 @@ import {Component} from 'angular2/core';
 import {CourseService} from './course.service';
 import {AutoGrowDirective} from './auto-grow.directive';
 
+// <template ngFor [ngForOf]="#couses" #course #i=index>
+//     <li>{{i + 1}} - {{course}}</li>
+// </template>
+
 
 @Component({
     selector: 'courses',
@@ -11,8 +15,8 @@ import {AutoGrowDirective} from './auto-grow.directive';
         <input type="text" autoGrow />
         <div [hidden]="courses.length == 0">
             <ul>
-                <li *ngFor="#course of courses">
-                    {{course}}
+                <li *ngFor="#course of courses, #i = index">
+                    {{i + 1}} - {{course}}
                 </li>
             </ul>
         </div>

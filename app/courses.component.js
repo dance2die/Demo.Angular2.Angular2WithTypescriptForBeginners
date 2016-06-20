@@ -24,6 +24,9 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
                 auto_grow_directive_1 = auto_grow_directive_1_1;
             }],
         execute: function() {
+            // <template ngFor [ngForOf]="#couses" #course #i=index>
+            //     <li>{{i + 1}} - {{course}}</li>
+            // </template>
             CoursesComponent = (function () {
                 function CoursesComponent(courseService) {
                     this.title = "Thte title of courses page";
@@ -32,7 +35,7 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
                 CoursesComponent = __decorate([
                     core_1.Component({
                         selector: 'courses',
-                        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <input type=\"text\" autoGrow />\n        <div [hidden]=\"courses.length == 0\">\n            <ul>\n                <li *ngFor=\"#course of courses\">\n                    {{course}}\n                </li>\n            </ul>\n        </div>\n        <div [hidden]=\"courses.length != 0\">\n            You don't have any courses\n        </div>\n    ",
+                        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <input type=\"text\" autoGrow />\n        <div [hidden]=\"courses.length == 0\">\n            <ul>\n                <li *ngFor=\"#course of courses, #i = index\">\n                    {{i + 1}} - {{course}}\n                </li>\n            </ul>\n        </div>\n        <div [hidden]=\"courses.length != 0\">\n            You don't have any courses\n        </div>\n    ",
                         providers: [course_service_1.CourseService],
                         directives: [auto_grow_directive_1.AutoGrowDirective]
                     }), 
