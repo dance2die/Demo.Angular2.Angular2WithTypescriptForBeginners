@@ -21,9 +21,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             SummaryPipe = (function () {
                 function SummaryPipe() {
                 }
-                SummaryPipe.prototype.transform = function (value, exponent) {
+                SummaryPipe.prototype.transform = function (value, args) {
                     if (value) {
-                        return value.substring(0, 50) + "...";
+                        var limit = (args && args[0]) ? parseInt(args[0]) : 50;
+                        return value.substring(0, limit) + "...";
                     }
                 };
                 SummaryPipe = __decorate([

@@ -15,7 +15,7 @@ import {SummaryPipe} from './summary.pipe';
     template: `
         {{post2.title}}
         <br />
-        {{post2.body | summary}}
+        {{post2.body | summary:20}}
 
 
         <ul class="nav nav-pills">
@@ -85,9 +85,7 @@ export class AppComponent {
 
     post2 = {
         title: 'Angular Tutorial for Beginners',
-        body: `
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel neque viverra, facilisis ante in, interdum massa. Aliquam molestie mattis suscipit. Mauris ut massa vitae ligula ultrices vulputate. Nam imperdiet pulvinar molestie.
-        `
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel neque viverra, facilisis ante in, interdum massa. Aliquam molestie mattis suscipit. Mauris ut massa vitae ligula ultrices vulputate. Nam imperdiet pulvinar molestie.`
     };
 
     tweets: any;
