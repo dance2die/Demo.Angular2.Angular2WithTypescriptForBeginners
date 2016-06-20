@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component', './authors.component', './star-glyphicon.component', './heart.component', './voter.component', './tweet.service', './tweet.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.component', './authors.component', './star-glyphicon.component', './heart.component', './voter.component', './tweet.service', './tweet.component', './summary.pipe'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.component', './authors.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1, authors_component_1, star_glyphicon_component_1, heart_component_1, voter_component_1, tweet_service_1, tweet_component_1;
+    var core_1, courses_component_1, authors_component_1, star_glyphicon_component_1, heart_component_1, voter_component_1, tweet_service_1, tweet_component_1, summary_pipe_1;
     var AppComponent;
     return {
         setters:[
@@ -37,6 +37,9 @@ System.register(['angular2/core', './courses.component', './authors.component', 
             },
             function (tweet_component_1_1) {
                 tweet_component_1 = tweet_component_1_1;
+            },
+            function (summary_pipe_1_1) {
+                summary_pipe_1 = summary_pipe_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -49,6 +52,10 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                         isFavorite: true,
                         heartCount: 10,
                         isLiked: false
+                    };
+                    this.post2 = {
+                        title: 'Angular Tutorial for Beginners',
+                        body: "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel neque viverra, facilisis ante in, interdum massa. Aliquam molestie mattis suscipit. Mauris ut massa vitae ligula ultrices vulputate. Nam imperdiet pulvinar molestie.\n        "
                     };
                     this.viewMode = 'map';
                     this.voter = {
@@ -72,7 +79,8 @@ System.register(['angular2/core', './courses.component', './authors.component', 
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <ul class=\"nav nav-pills\">\n            <li [class.active]=\"viewMode == 'map'\"><a (click)=\"viewMode = 'map'\">Map View</a></li>\n            <li [class.active]=\"viewMode == 'list'\"><a (click)=\"viewMode = 'list'\">List View</a></li>\n        </ul>\n        <div [ngSwitch]=\"viewMode\">\n            <template [ngSwitchWhen]=\"'map'\" ngSwitchDefault>Map View Content</template>\n            <template [ngSwitchWhen]=\"'list'\">List View Content</template>\n        </div>\n\n\n        <div class=\"tweets\">\n            <div *ngFor=\"#tweet of tweets\">\n                <tweet [data]=\"tweet\"></tweet>\n            </div>\n        </div>\n\n        <br />\n        <br />\n        <br />\n\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <i class=\"glyphicon glyphicon-star\"></i>\n        <starGlyphicon \n            [isFavorite]=\"post.isFavorite\"\n            (change)=\"onFavoriteChange($event)\">\n        </starGlyphicon>\n\n        <heart\n            [heartCount]=\"post.heartCount\"\n            [isLiked]=\"post.isLiked\"\n            (change)=\"onLikeChange($event)\">\n        </heart>\n\n        <button (click)='onClick($event)'>Click Me!</button>\n        <br /><br />\n        <voter\n            [myVote]=\"voter.myVote\"\n            [voteCount]=\"voter.voteCount\"\n            (vote)=\"onVote($event)\">\n        </voter>\n\n\n        <courses></courses>\n        <authors></authors>\n    ",
+                        pipes: [summary_pipe_1.SummaryPipe],
+                        template: "\n        {{post2.title}}\n        <br />\n        {{post2.body | summary}}\n\n\n        <ul class=\"nav nav-pills\">\n            <li [class.active]=\"viewMode == 'map'\"><a (click)=\"viewMode = 'map'\">Map View</a></li>\n            <li [class.active]=\"viewMode == 'list'\"><a (click)=\"viewMode = 'list'\">List View</a></li>\n        </ul>\n        <div [ngSwitch]=\"viewMode\">\n            <template [ngSwitchWhen]=\"'map'\" ngSwitchDefault>Map View Content</template>\n            <template [ngSwitchWhen]=\"'list'\">List View Content</template>\n        </div>\n\n\n        <div class=\"tweets\">\n            <div *ngFor=\"#tweet of tweets\">\n                <tweet [data]=\"tweet\"></tweet>\n            </div>\n        </div>\n\n        <br />\n        <br />\n        <br />\n\n        <h1 [style.backgroundColor]=\"isActive ? 'blue' : 'red'\">{{title}}</h1>\n        <input type=\"text\" [(ngModel)]=\"title\" />\n\n        <i class=\"glyphicon glyphicon-star\"></i>\n        <starGlyphicon \n            [isFavorite]=\"post.isFavorite\"\n            (change)=\"onFavoriteChange($event)\">\n        </starGlyphicon>\n\n        <heart\n            [heartCount]=\"post.heartCount\"\n            [isLiked]=\"post.isLiked\"\n            (change)=\"onLikeChange($event)\">\n        </heart>\n\n        <button (click)='onClick($event)'>Click Me!</button>\n        <br /><br />\n        <voter\n            [myVote]=\"voter.myVote\"\n            [voteCount]=\"voter.voteCount\"\n            (vote)=\"onVote($event)\">\n        </voter>\n\n\n        <courses></courses>\n        <authors></authors>\n    ",
                         directives: [courses_component_1.CoursesComponent,
                             authors_component_1.AuthorsComponent,
                             star_glyphicon_component_1.StarGlyphiconComponent,

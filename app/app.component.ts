@@ -6,10 +6,18 @@ import {HeartComponent} from './heart.component';
 import {VoterComponent} from './voter.component';
 import {TweetService} from './tweet.service';
 import {TweetComponent} from './tweet.component';
+import {SummaryPipe} from './summary.pipe';
+
 
 @Component({
     selector: 'my-app',
+    pipes: [SummaryPipe],
     template: `
+        {{post2.title}}
+        <br />
+        {{post2.body | summary}}
+
+
         <ul class="nav nav-pills">
             <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
             <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
@@ -73,6 +81,13 @@ export class AppComponent {
         isFavorite: true,
         heartCount: 10,
         isLiked: false
+    };
+
+    post2 = {
+        title: 'Angular Tutorial for Beginners',
+        body: `
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel neque viverra, facilisis ante in, interdum massa. Aliquam molestie mattis suscipit. Mauris ut massa vitae ligula ultrices vulputate. Nam imperdiet pulvinar molestie.
+        `
     };
 
     tweets: any;
