@@ -1,11 +1,11 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
     selector: 'zippy',
     template: `
         <div class="panel panel-default">
             <div class="panel-heading" (click)="onClick()">
-                <ng-content select="zippy.title"></ng-content>
+                {{title}}
                 <div class="glyphicon pull-right" 
                     [ngClass]="{
                         'glyphicon-chevron-up': isExpanded,
@@ -21,6 +21,7 @@ import {Component} from 'angular2/core';
 })
 export class ZippyComponent {
     private isExpanded: boolean = false;
+    @Input() title: string;
 
     onClick() {
         this.isExpanded = !this.isExpanded;
