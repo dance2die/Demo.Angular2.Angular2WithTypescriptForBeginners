@@ -6,12 +6,12 @@ import {Component, Input} from 'angular2/core';
         <div class="panel panel-default">
             <div class="panel-heading" (click)="onClick()">
                 {{title}}
-                <div class="glyphicon pull-right" 
+                <i class="glyphicon pull-right" 
                     [ngClass]="{
                         'glyphicon-chevron-up': isExpanded,
                         'glyphicon-chevron-down': !isExpanded
                      }">
-                </div>
+                </i>
             </div>
             <div class="panel-body" [hidden]="!isExpanded">
                 <ng-content></ng-content>

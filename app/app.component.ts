@@ -9,13 +9,16 @@ import {TweetComponent} from './tweet.component';
 import {SummaryPipe} from './summary.pipe';
 import {BootstrapPanelComponent} from './bootstrap.panel.component';
 import {ZippyComponent} from './zippy.component';
-
+import {ContactFormComponent} from './contact-form.component';
 
 @Component({
     selector: 'my-app',
     pipes: [SummaryPipe],
     template: `
+        <contact-form></contact-form>
 
+        <br />
+        <br />
         <div class="row">
             <zippy title="Who can see my stuff?">
                 Content of who can see my stuff
@@ -95,7 +98,8 @@ import {ZippyComponent} from './zippy.component';
                  VoterComponent,
                  TweetComponent,
                  BootstrapPanelComponent,
-                ZippyComponent],
+                ZippyComponent,
+                ContactFormComponent],
     providers: [TweetService]
 })
 export class AppComponent { 
