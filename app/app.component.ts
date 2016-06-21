@@ -8,12 +8,26 @@ import {TweetService} from './tweet.service';
 import {TweetComponent} from './tweet.component';
 import {SummaryPipe} from './summary.pipe';
 import {BootstrapPanelComponent} from './bootstrap.panel.component';
+import {ZippyComponent} from './zippy.component';
 
 
 @Component({
     selector: 'my-app',
     pipes: [SummaryPipe],
     template: `
+
+        <div class="row">
+            <zippy title="Who can see my stuff?">
+                Content of who can see my stuff
+            </zippy>
+            <zippy title="Who can conctact me?">
+                Content of who can contact me
+            </zippy>
+        </div>
+
+        <br />
+        <br />
+
         <bs-panel>
             <div class="heading">This is a heading</div>
             <div class="body">Body line 1</div>
@@ -80,7 +94,8 @@ import {BootstrapPanelComponent} from './bootstrap.panel.component';
                  HeartComponent,
                  VoterComponent,
                  TweetComponent,
-                 BootstrapPanelComponent],
+                 BootstrapPanelComponent,
+                ZippyComponent],
     providers: [TweetService]
 })
 export class AppComponent { 
