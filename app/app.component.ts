@@ -10,11 +10,16 @@ import {SummaryPipe} from './summary.pipe';
 import {BootstrapPanelComponent} from './bootstrap.panel.component';
 import {ZippyComponent} from './zippy.component';
 import {ContactFormComponent} from './contact-form.component';
+import {SignUpFormComponent} from "./signup-form.component";
 
 @Component({
     selector: 'my-app',
     pipes: [SummaryPipe],
     template: `
+        <signup-form></signup-form>
+        <br />
+        <br />
+
         <contact-form></contact-form>
 
         <br />
@@ -99,7 +104,8 @@ import {ContactFormComponent} from './contact-form.component';
                  TweetComponent,
                  BootstrapPanelComponent,
                 ZippyComponent,
-                ContactFormComponent],
+                ContactFormComponent,
+        SignUpFormComponent],
     providers: [TweetService]
 })
 export class AppComponent { 
