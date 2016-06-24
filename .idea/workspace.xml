@@ -4,7 +4,6 @@
     <list default="true" id="013bf2e9-0b4b-4b85-a1c0-6c602c015188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/password-change-form.component.html" afterPath="$PROJECT_DIR$/app/password-change-form.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/password-change-form.component.ts" afterPath="$PROJECT_DIR$/app/password-change-form.component.ts" />
     </list>
     <ignored path="angular2-seed.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +72,8 @@
       <file leaf-file-name="password-change-form.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/password-change-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+            <state relative-caret-position="252">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -83,8 +82,8 @@
       <file leaf-file-name="signup-form.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/signup-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="274">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -272,7 +271,7 @@
       <updated>1466431295423</updated>
       <workItem from="1466431299097" duration="4497000" />
       <workItem from="1466507731863" duration="10297000" />
-      <workItem from="1466761758113" duration="2232000" />
+      <workItem from="1466761758113" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="Using Webstorm instead of Visual Studio code.">
       <created>1466431455113</created>
@@ -372,11 +371,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466767054280</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added a required field validation">
+      <created>1466767583774</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1466767583774</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17026000" />
+    <option name="totallyTimeSpent" value="17095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,7 +443,8 @@
     <MESSAGE value="implemented an async validator" />
     <MESSAGE value="load image" />
     <MESSAGE value="Added a skeletal code for password change form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a skeletal code for password change form" />
+    <MESSAGE value="Added a required field validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a required field validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -647,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/signup-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/password-change-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -667,16 +666,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/signup-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="43" />
+        <state relative-caret-position="274">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/signup-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/password-change-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+        <state relative-caret-position="252">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
