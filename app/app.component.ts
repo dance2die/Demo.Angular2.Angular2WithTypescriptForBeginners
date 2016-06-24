@@ -11,11 +11,17 @@ import {BootstrapPanelComponent} from './bootstrap.panel.component';
 import {ZippyComponent} from './zippy.component';
 import {ContactFormComponent} from './contact-form.component';
 import {SignUpFormComponent} from "./signup-form.component";
+import {PasswordChangeFormComponent} from "./password-change-form.component";
 
 @Component({
     selector: 'my-app',
     pipes: [SummaryPipe],
     template: `
+        <password-change-form></password-change-form>
+
+        <br />
+        <br />
+
         <signup-form></signup-form>
         <br />
         <br />
@@ -105,7 +111,7 @@ import {SignUpFormComponent} from "./signup-form.component";
                  BootstrapPanelComponent,
                 ZippyComponent,
                 ContactFormComponent,
-        SignUpFormComponent],
+        SignUpFormComponent, PasswordChangeFormComponent],
     providers: [TweetService]
 })
 export class AppComponent { 
