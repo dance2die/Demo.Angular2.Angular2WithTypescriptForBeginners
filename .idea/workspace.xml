@@ -4,6 +4,7 @@
     <list default="true" id="013bf2e9-0b4b-4b85-a1c0-6c602c015188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/password-change-form.component.html" afterPath="$PROJECT_DIR$/app/password-change-form.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/password-change-form.component.ts" afterPath="$PROJECT_DIR$/app/password-change-form.component.ts" />
     </list>
     <ignored path="angular2-seed.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,34 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <marker date="1466766910681" expanded="true" signature="1103:1353" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="1153:1222" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="1271:1338" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="1404:1577" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="1720:1935" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="1971:2150" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="2181:2306" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="2225:2291" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="2556:2673" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="2690:2831" ph="..." />
-                <marker date="1466766910681" expanded="true" signature="2930:3061" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="password-change-form.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/password-change-form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -62,7 +40,7 @@
       <file leaf-file-name="signup-form.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/signup-form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="-17">
               <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
@@ -72,8 +50,8 @@
       <file leaf-file-name="password-change-form.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/password-change-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="136">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -82,19 +60,31 @@
       <file leaf-file-name="signup-form.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/signup-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="34" column="28" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="304">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usernameValidators.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/usernameValidators.ts">
+      <file leaf-file-name="SubscribeFormComponent.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/SubscribeFormComponent.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+              <folding>
+                <marker date="1466593948196" expanded="true" signature="153:1647" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="190:827" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="265:421" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="479:808" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="532:608" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="661:785" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="877:1522" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="954:1110" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="1170:1503" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="1223:1301" ph="..." />
+                <marker date="1466593948196" expanded="true" signature="1354:1480" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,9 +130,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="528" />
-    <option name="width" value="1079" />
-    <option name="height" value="846" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="855" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -171,7 +162,38 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -271,7 +293,7 @@
       <updated>1466431295423</updated>
       <workItem from="1466431299097" duration="4497000" />
       <workItem from="1466507731863" duration="10297000" />
-      <workItem from="1466761758113" duration="2301000" />
+      <workItem from="1466761758113" duration="4691000" />
     </task>
     <task id="LOCAL-00001" summary="Using Webstorm instead of Visual Studio code.">
       <created>1466431455113</created>
@@ -378,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466767583774</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added a submit button without event handler">
+      <created>1466767653592</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1466767653592</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17095000" />
+    <option name="totallyTimeSpent" value="19485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,10 +423,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="528" y="0" width="1079" height="846" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="855" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3119403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17617238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -405,7 +434,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33239833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25207755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -444,7 +473,8 @@
     <MESSAGE value="load image" />
     <MESSAGE value="Added a skeletal code for password change form" />
     <MESSAGE value="Added a required field validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a required field validation" />
+    <MESSAGE value="Added a submit button without event handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a submit button without event handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -604,35 +634,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/SubscribeFormComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="19" />
-          <folding>
-            <marker date="1466593948196" expanded="false" signature="153:1647" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="190:827" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="265:421" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="479:808" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="532:608" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="661:785" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="877:1522" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="954:1110" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="1170:1503" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="1223:1301" ph="..." />
-            <marker date="1466593948196" expanded="true" signature="1354:1480" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.component.ts" />
-    <entry file="file://$PROJECT_DIR$/app/usernameValidators.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -656,34 +658,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/password-change-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/signup-form.component.html">
+    <entry file="file://$PROJECT_DIR$/app/usernameValidators.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/signup-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="-17">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/signup-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SubscribeFormComponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <marker date="1466593948196" expanded="true" signature="153:1647" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="190:827" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="265:421" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="479:808" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="532:608" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="661:785" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="877:1522" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="954:1110" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="1170:1503" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="1223:1301" ph="..." />
+            <marker date="1466593948196" expanded="true" signature="1354:1480" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/password-change-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>

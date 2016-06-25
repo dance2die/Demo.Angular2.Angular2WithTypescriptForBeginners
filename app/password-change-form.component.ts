@@ -11,7 +11,9 @@ export class PasswordChangeFormComponent {
     constructor(fb: FormBuilder) {
         this.form = fb.group({
             currentPassword: ['', Validators.compose([Validators.required]), null],
-            newPassword: ['', Validators.compose([Validators.required]), null],
+            newPassword: ['', Validators.compose([
+                Validators.required,
+                Validators.minLength(5)]), null],
             confirmPassword: ['', Validators.compose([Validators.required]), null]
         });
     }
