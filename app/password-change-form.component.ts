@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {FormBuilder, Validators, ControlGroup} from 'angular2/common';
+import {PasswordValidators} from "./PasswordValidators";
 
 @Component({
     selector: 'password-change-form',
@@ -13,13 +14,20 @@ export class PasswordChangeFormComponent {
             currentPassword: ['', Validators.compose([Validators.required]), null],
             newPassword: ['', Validators.compose([
                 Validators.required,
-                Validators.minLength(5)]), null],
-            confirmPassword: ['', Validators.compose([Validators.required]), null]
-        });
+                PasswordValidators.complexPassword]), null],
+            confirmPassword: ['', Validators.required]
+            }, {validator: PasswordValidators.passwordShouldMatch});
     }
 
     changePassword() {
+        var currentPassword = this.form.find('currentPassword');
+        if (currentPassword != 1234){
+            currentPassword.setErrors({validOldPassword: true});
+        }
 
+        if (this.form.valid){
+            alert("password successfully changed.");
+        }
     }
 }
 
