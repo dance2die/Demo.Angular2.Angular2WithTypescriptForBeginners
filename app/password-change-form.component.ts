@@ -21,7 +21,7 @@ export class PasswordChangeFormComponent {
 
     changePassword() {
         var currentPassword = this.form.find('currentPassword');
-        if (currentPassword != 1234){
+        if (currentPassword.value != 1234){
             currentPassword.setErrors({validOldPassword: true});
         }
 
